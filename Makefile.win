@@ -1,0 +1,46 @@
+# Project: RPG PROJECT
+# Makefile created by Dev-C++ 5.6.2
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o character.o menu.o inventory.o generalfunctions.o initFighting.o rngOccurances.o
+LINKOBJ  = main.o character.o menu.o inventory.o generalfunctions.o initFighting.o rngOccurances.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
+BIN      = "RPG PROJECT.exe"
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+character.o: character.cpp
+	$(CPP) -c character.cpp -o character.o $(CXXFLAGS)
+
+menu.o: menu.cpp
+	$(CPP) -c menu.cpp -o menu.o $(CXXFLAGS)
+
+inventory.o: inventory.cpp
+	$(CPP) -c inventory.cpp -o inventory.o $(CXXFLAGS)
+
+generalfunctions.o: generalfunctions.cpp
+	$(CPP) -c generalfunctions.cpp -o generalfunctions.o $(CXXFLAGS)
+
+initFighting.o: initFighting.cpp
+	$(CPP) -c initFighting.cpp -o initFighting.o $(CXXFLAGS)
+
+rngOccurances.o: rngOccurances.cpp
+	$(CPP) -c rngOccurances.cpp -o rngOccurances.o $(CXXFLAGS)
