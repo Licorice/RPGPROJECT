@@ -35,7 +35,7 @@
 		cin>>_age;
 	}
 	if(_age<35){
-		str=95*((_age/91)+1);
+		str=95*(_age/91+1);
 	}else{
 		str=95/((_age/91)+1);
 	}
@@ -59,7 +59,7 @@
 	
 	
 	
-	print("Your stats currently looks like the following:\n");
+	print("Your stats currently looks like the following:\n");//Make this into a function
 	cout<<"Strength: "<<str<<endl;
 	cout<<"Stamina: "<<sta<<endl;
 	cout<<"Dexterity: "<<dex<<endl;
@@ -70,5 +70,5 @@
 	MainCharacter mc;
 	mc.setstats(_name,_age,str,sta,dex,in,luk,chr,1,0,_statpoints);
 	print("You may allocate up to 10 different stat pooints.\n");
-	//AllocateStatPoints(_statpoints);// make this function
+	mc.AllocateStatPoints(_statpoints);
 	}

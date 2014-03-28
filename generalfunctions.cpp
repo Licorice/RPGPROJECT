@@ -4,7 +4,7 @@
 	#include "generalfunctions.h"
 using namespace std;
 void Information(){
-		int _REVISION = 1;
+		int _REVISION = 3;
 	
 	
 	SetConsoleTitle("Billy's Adventure - The Game");
