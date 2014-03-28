@@ -6,6 +6,10 @@ A text based RPG with a shitty story. Pretty much me practicing and messing arou
 
 Changelog:
 
+r3:
+
+Added stat allocation. -> Character creation done?
+
 r2:
 
 Fixed the class shit so it compiles now.
