@@ -11,7 +11,7 @@
 		bool _START = true;
 		print("Thank you for playing this game.\n");
 		while(_START){
-			cout<<"Menu\nStart\nLoad(not available yet)\nQuit\n";
+			cout<<"=======Menu=======\n.:Start:.\n.:Load:. (not available yet)\n.:Quit:.\nWrite your choice and press enter.\n";
 			cin>>_ANSWER;
 			for(int i=0;i<_ANSWER.size();i++){
 				if(_ANSWER[i]> 64 && _ANSWER[i]< 90){
@@ -57,18 +57,13 @@
 	}
 	luk = 31 + (rand() % 15);
 	
-	
-	
-	print("Your stats currently looks like the following:\n");//Make this into a function
-	cout<<"Strength: "<<str<<endl;
-	cout<<"Stamina: "<<sta<<endl;
-	cout<<"Dexterity: "<<dex<<endl;
-	cout<<"Intelligence: "<<in<<endl;
-	cout<<"Charisma: "<<chr<<endl;
-	cout<<"Luck: "<<luk<<endl;
-	int _statpoints=10;
-	MainCharacter mc;
-	mc.setstats(_name,_age,str,sta,dex,in,luk,chr,1,0,_statpoints);
+		int _statpoints=10;
+		MainCharacter mc;
+		mc.setstats(_name,_age,str,sta,dex,in,luk,chr,1,0,_statpoints);
+		
+	print("Your stats currently looks like the following:\n");//Displays and allows you to allocate points.
+	mc.displayStats();
 	print("You may allocate up to 10 different stat pooints.\n");
 	mc.AllocateStatPoints(_statpoints);
+	//Anything else to character creation?
 	}

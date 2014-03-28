@@ -14,8 +14,8 @@
 	
 	
 	int main(int argc, char** argv) {
-		Information();
-		if(!start()){
+		Information();//Infoshit
+		if(!start()){//If the start menu returns 0, it exits, aka if you choose quit.
 		return 0;
 	}
 	cout<<"Starting...\n";//Character creation

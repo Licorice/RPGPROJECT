@@ -7,6 +7,7 @@ class MainCharacter{
 		int age,strength,stamina,dexterity,intelligence,luck,charm,level,experience,statpoints;
 	public:
 		void setstats(string _name, int _age, int _strength, int _stamina, int _dexterity,int _intelligence,int _luck,int _charm, int _level, int _experience, int _statpoints);
+		void displayStats();
 		void AllocateStatPoints(int _statpoints);
 };
 #endif

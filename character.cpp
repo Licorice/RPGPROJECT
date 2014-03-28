@@ -1,10 +1,10 @@
 #include <string>
 #include <iostream>
 #include "character.h"
+#include "generalfunctions.h"
  using namespace std;
-//class MainCharacter{
-//	public:
 
+		//Sets all variables for the main character.
 		void MainCharacter::setstats(string _name, int _age, int _strength, int _stamina, int _dexterity,int _intelligence,int _luck,int _charm, int _level, int _experience, int _statpoints){
 			name=_name;
 			age=_age;
@@ -14,20 +14,31 @@
 			intelligence=_intelligence;
 			luck=_luck;
 			charm=_charm;
+			level=_level;
+			experience=_experience;
 		}
+		void MainCharacter::displayStats(){
+	cout<<"Strength: "<<strength<<endl;
+	cout<<"Stamina: "<<stamina<<endl;
+	cout<<"Dexterity: "<<dexterity<<endl;
+	cout<<"Intelligence: "<<intelligence<<endl;
+	cout<<"Charisma: "<<charm<<endl;
+	cout<<"Luck: "<<luck<<endl;
+		}
+		//Allocate points for the object
 		void MainCharacter::AllocateStatPoints(int _statpoints){
 			int input;
 			while (_statpoints){
 			cout<<"SP:"<<_statpoints<<endl;
-			cout<<"Write the amount of each stat you want to add, if you do not want to add any to an attribute, write '0'.\n";
+			print("Write the amount of each stat you want to add, if you do not want to add any to an attribute, write '0'.\n");
 
-			if(_statpoints){
+			if(_statpoints){//If you have statpoints
 			cout<<"Strength: ";
 			cin>>input;
-			}if(input <= _statpoints){
-				strength=strength+input;
-				_statpoints=_statpoints-input;
-			}			if(_statpoints>0){
+			}if(input <= _statpoints){//If you have enough statpoints
+				strength=strength+input;//Add them
+				_statpoints=_statpoints-input;//Remove them
+			}			if(_statpoints>0){//repeat
 			cout<<"Stamina: ";
 			cin>>input;
 			}if(input <= _statpoints){
